@@ -46,7 +46,7 @@
 <body style='margin : 0px; overflow: hidden;'>
    <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>Loading, please wait...</div>
+    <div>少々お時間をいただきます</div>
   </div>
     <a-scene
         vr-mode-ui='enabled: false;'
@@ -54,20 +54,19 @@
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
         <a-assets>
-          <video id="ozuhata" autoplay muted loop="true" src="./assets/ozuhata.mp4"></video>
+          <video id="penguin-sledding" autoplay muted loop="true" src="./assets/ozuhata.mp4"></video>
         </a-assets>
 
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft'
-	    url='./assets/images/ozujo'
+	    url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/jirochanf/web-ar/master/public/image-tracking/assets/images/cake' 
             smooth='true'
             smoothCount='10'
             smoothTolerance='0.01'
             smoothThreshold='5'
           >
-<!--	 <a-nft type="nft" url="/nft-marker/image "> 	-->
-         <a-video src="#ozuhata" width="480" height="270" position="-90 0 0" rotation="-90 0 0"></a-video>
+          <a-video src="#penguin-sledding" width="480" height="270" position="-90 0 0" rotation="-90 0 0"></a-video>
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>
